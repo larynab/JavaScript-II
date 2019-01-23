@@ -2,13 +2,49 @@
 // Write a simple closure of your own creation.  Keep it simple!
 
 
-// ==== Challenge 2: Create a counter function ====
-const counter = () => {
-  // Return a function that when invoked increments and returns a counter variable.
+function sayMeow(meow) {
+  const myMeow = meow;
+  console.log(`I am a cat and I like to ${myMeow}`);
+
+  function myHairball() {
+    const hairBalled = "*cough* *wheeze*";
+    console.log(`My ${myMeow}s can be nice until I get a hairball.`);
+
+    function nowChoke() {
+      const nineLives = "Revive!"
+      console.log(`${myMeow}ing , oh god ${hairBalled} , noooooo.` )
+    };
+    nowChoke();
+  };
+  myHairball();
 };
+
+sayMeow("Purrrrrr");
+
+// ==== Challenge 2: Create a counter function ====
 // Example usage: const newCounter = counter();
 // newCounter(); // 1
 // newCounter(); // 2
+
+
+
+
+const counter = (function () {
+  var add = 0;
+  return function () {add += 1; return add};
+  
+})();
+
+counter();
+counter();
+console.log(counter());
+console.log(counter());
+
+
+
+
+
+
 
 /* STRETCH PROBLEM, Do not attempt until you have completed all previous tasks for today's project files */
 
